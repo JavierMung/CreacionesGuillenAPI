@@ -13,6 +13,5 @@ public partial class Producto
 
     public decimal? Precio { get; set; }
 
-	[SwaggerIgnore]
     public virtual ICollection<DetallePedido> DetallePedidos { get; set; } = new List<DetallePedido>();
 }
