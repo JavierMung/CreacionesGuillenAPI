@@ -18,7 +18,6 @@ public partial class DetallePedido
     public int Cantidad { get; set; }
 
     public string? Color { get; set; }
-    public decimal Total { get; set; }
 
     public virtual Cliente? IdClienteNavigation { get; set; }
 

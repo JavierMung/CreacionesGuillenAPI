@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using webAPI.Models;
 using webAPI.Services.CreacionesGuillenServices;
-using webAPI.ViewModels;
+using webAPI.ViewModels.CreacionesGuillenViews;
 
 namespace webAPI.Services.CreacionesGuillenServices
 {
