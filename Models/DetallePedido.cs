@@ -27,4 +27,3 @@ public partial class DetallePedido
 
     public virtual Producto? IdProductoNavigation { get; set; }
 }
-0
