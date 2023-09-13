@@ -7,9 +7,9 @@ public partial class Trabajador
 {
     public int IdTrabajador { get; set; }
 
-    public int? IdRol { get; set; }
+    public int IdRol { get; set; }
 
-    public string? Nombre { get; set; }
+    public string Nombre { get; set; } = null!;
 
     public string? Apellidos { get; set; }
 
@@ -19,5 +19,5 @@ public partial class Trabajador
 
     public virtual ICollection<DetallePedido> DetallePedidos { get; set; } = new List<DetallePedido>();
 
-    public virtual Role? IdRolNavigation { get; set; }
+    public virtual Role IdRolNavigation { get; set; } = null!;
 }

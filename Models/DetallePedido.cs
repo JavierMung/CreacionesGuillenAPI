@@ -11,19 +11,15 @@ public partial class DetallePedido
 
     public int IdProducto { get; set; }
 
-    public int IdCliente { get; set; }
-
     public int IdEncargado { get; set; }
 
     public int Cantidad { get; set; }
 
-    public string? Color { get; set; }
+    public string Color { get; set; } = null!;
 
-    public virtual Cliente? IdClienteNavigation { get; set; }
+    public virtual Trabajador IdEncargadoNavigation { get; set; } = null!;
 
-    public virtual Trabajador? IdEncargadoNavigation { get; set; }
+    public virtual Pedido IdPedidoNavigation { get; set; } = null!;
 
-    public virtual Pedido? IdPedidoNavigation { get; set; }
-
-    public virtual Producto? IdProductoNavigation { get; set; }
+    public virtual Producto IdProductoNavigation { get; set; } = null!;
 }

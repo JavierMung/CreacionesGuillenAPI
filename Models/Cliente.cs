@@ -7,11 +7,11 @@ public partial class Cliente
 {
     public int IdCliente { get; set; }
 
-    public string? Nombre { get; set; }
+    public string Nombre { get; set; } = null!;
 
     public string? Dirección { get; set; }
 
     public string? NumeroTelefono { get; set; }
 
-    public virtual ICollection<DetallePedido> DetallePedidos { get; set; } = new List<DetallePedido>();
+    public virtual ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();
 }

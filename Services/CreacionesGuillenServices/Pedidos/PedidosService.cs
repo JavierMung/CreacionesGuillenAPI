@@ -33,7 +33,6 @@ namespace webAPI.Services.CreacionesGuillenServices.Pedidos
 				var pedidoView = new PedidoView(
 					   pedido.IdPedido,
 					   pedido.IdProductoNavigation?.Nombre ?? string.Empty,
-					   pedido.IdClienteNavigation?.Nombre ?? string.Empty,
 					   pedido.IdEncargadoNavigation?.Nombre ?? string.Empty,
 					   pedido.Cantidad,
 					   pedido.Color ?? string.Empty,
@@ -81,11 +80,10 @@ namespace webAPI.Services.CreacionesGuillenServices.Pedidos
 				{
 					// Obtener el nombre del Producto, Cliente y Encargado en una sola consulta
 					var pedidoView = new PedidoView(
-						detalle.IdPedido ?? 0,
+						detalle.IdPedido ,
 						detalle.IdProductoNavigation?.Nombre ?? string.Empty,
-						detalle.IdClienteNavigation?.Nombre ?? string.Empty,
 						detalle.IdEncargadoNavigation?.Nombre ?? string.Empty,
-						detalle.Cantidad ?? 0,
+						detalle.Cantidad ,
 						detalle.Color ?? string.Empty,
 						0 // Puedes calcular el total según tu lógica aquí
 					);
