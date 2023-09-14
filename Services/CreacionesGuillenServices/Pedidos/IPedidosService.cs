@@ -4,11 +4,11 @@ using webAPI.ViewModels.CreacionesGuillenViews;
 
 namespace webAPI.Services.CreacionesGuillenServices.Pedidos
 {
-	public interface IPedidosService
-	{
-		Task<List<List<PedidoView>>> GetPedidos();
-		Task<List<PedidoView>?> GetPedido(int id);
-		Task<List<PedidoView>> AddPedido(List<DetallePedido> p);
-		Task<List<PedidoView>?> UpdatePedido(int id, Pedido p);
-	}
+    public interface IPedidosService
+    {
+        Task<List<PedidoView<String>>> GetPedidos();
+        Task<PedidoView<String>> GetPedido(int id);
+        Task<PedidoView<String>> AddPedido(PedidoView<String> pedido);
+        Task<PedidoView<String>> UpdatePedido(PedidoView<String> pedido);
+    }
 }
