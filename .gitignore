@@ -1,5 +1,4 @@
-./Frontend/node_modules
-./Frontend/.git
-./BackendAPI/bin
-./BackendAPI/obj
+node_modules/
+/BackendAPI/bin/
+/BackendAPI/obj/
 
