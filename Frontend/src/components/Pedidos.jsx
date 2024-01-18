@@ -1,20 +1,20 @@
-import { useState } from "react";
-import { productos, clientes, encargados } from "../helpers/Data";
-import Formulario from "../helpers/Formulario";
+//import { useState } from "react";
+import {  clientes, encargados } from "../helpers/Data";
+//import Formulario from "../helpers/Formulario";
 import useActive from "../hooks/useActive";
 function Pedidos() {
 
     const { active, handleActive } = useActive()
-    const [formularios, setFormularios] = useState([]);
-    const [selectedProducts, setSelectedProducts] = useState(() => {
-        const initialState = {};
+ //   const [formularios, setFormularios] = useState([]);
+ //   const [selectedProducts, setSelectedProducts] = useState(() => {
+ /*       const initialState = {};
         productos.forEach(producto => {
             initialState[producto.nombre] = false;
         });
         return initialState;
-    });
+    });*/
 
-    const toggleProductSelection = (nombreProducto) => {
+  /*  const toggleProductSelection = (nombreProducto) => {
         setSelectedProducts(prevState => {
             console.log(prevState[nombreProducto]);
             if (prevState[nombreProducto]) {
@@ -67,12 +67,11 @@ function Pedidos() {
     const handleRemoveFormulario = (idFormulario) => {
         const updatedFormularios = formularios.filter(form => form.idFormulario !== idFormulario);
         setFormularios(updatedFormularios);
-    };
+    };*/
     return (
         <>
-            <button className="btn btn-success" onClick={MostrarForms}>Mostrar forms</button>
             <h1>Pedidos</h1>
-            <div className="row justify-content-center text-center">
+            <div className="row justify-content-center text-center p-sm-5">
                 <div className="text-start col-lg-7 col-md-8 mt-2 ">
                     <h3>Cliente</h3>
                 </div>
@@ -105,11 +104,85 @@ function Pedidos() {
                         })}
                     </select>
                 </div>
-                <div className="text-center col-lg-7 col-md-8 mt-4">
+                <div className="text-start col-lg-7 col-md-8 mt-4 ">
                     <h4>Elige los productos</h4>
                 </div>
+
                 <div className="col-lg-7 col-md-8 ">
-                    {productos.map((producto) => (
+                    <div className="row justify-content-md-center justify-content-sm-start">
+                        <div className="col-lg-12 col-md-12">
+                            <label for="exampleDataList" class="form-label">Producto</label>
+                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." />
+                            <datalist id="datalistOptions">
+                                <option value="San Francisco" />
+                                <option value="New York" />
+                                <option value="Seattle" />
+                                <option value="Los Angeles" />
+                                <option value="Chicago" />
+                            </datalist>
+                        </div>
+                        <div className="col-lg-2 col-md-2 mt-2">
+                            <label for="exampleDataList" class="form-label">Cantidad</label>
+                            <input type="number" aria-label="Last name" class="form-control" />
+                        </div>
+                        <div className="col-lg-2 col-md-2 mt-2">
+                            <label for="exampleDataList" class="form-label">Precio</label>
+                            <input type="text" aria-label="Last name" class="form-control" />
+                        </div>
+                        <div className="col-lg-4 col-md-4 mt-2">
+                            <label for="exampleDataList" class="form-label">Encargado</label>
+                            <select class="form-select" aria-label="Default select example" disabled={active}>
+                                <option selected>Seleccionar encargado</option>
+                                {encargados.map((active, index) => {
+                                    return (<>
+                                        <option value={index}>{active.nombre}</option>
+                                    </>)
+                                })}
+                            </select>
+                        </div>
+                        <div className="col-lg-4 col-md-4 mt-2">
+                            <label for="exampleDataList" class="form-label">Descripción</label>
+                            <input type="text" aria-label="Last name" class="form-control" />
+                        </div>
+
+                        <div className="col-lg-10 col-md-12 mt-2">
+                            <button type="button" class="btn btn-primary w-100">Agregar producto </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="text-center col-lg-7 col-md-8 mt-4 border-top pt-3">
+                    <h4>Resumen del pedido</h4>
+                </div>
+                <div className="col-lg-7 col-md-8 ">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Encargado</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Moño azul rey</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody></table>
+                    {/*productos.map((producto) => (
                         <div key={producto.nombre} className="form-check border p-3  m-1">
                             <input
                                 className="form-check-input ms-1"
@@ -155,11 +228,11 @@ function Pedidos() {
                                 </button>
                             )}
                         </div>
-                    ))}
+                            ))*/}
 
 
                     <div className="text-end">
-                        <button type="button" class="btn btn-danger ">Cancelar</button>
+                        <button type="button" class="btn btn-danger ">Limpiar</button>
                         <button type="button" class="btn btn-success ms-2">Realizar pedido</button>
                     </div>
                 </div>
