@@ -14,7 +14,7 @@ function App() {
         </div>
       </section>
       <div className="row justify-content-center text-center">
-        <div className="col mb-5">
+        <div className="col mb-5" style={{marginTop:"100px"}}>
           <Outlet />
         </div>
       </div>

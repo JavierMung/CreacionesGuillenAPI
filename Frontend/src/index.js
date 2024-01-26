@@ -5,8 +5,9 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
-import Pedidos from './components/Pedidos';
+import CreateOrder from './components/CreateOrder';
 import Inventario from './components/Inventario';
+import ViewOrders from './components/ViewOrders';
 
 const router = createBrowserRouter([
   {
@@ -16,12 +17,16 @@ const router = createBrowserRouter([
 
     children: [
       {
-        path: "/pedidos",
-        element: <Pedidos />
+        path: "/crear-pedido",
+        element: <CreateOrder />
       },
       {
         path: "/inventario",
         element: <Inventario />
+      },
+      {
+        path: "/pedidos",
+        element: <ViewOrders />
       }
     ],
   }
