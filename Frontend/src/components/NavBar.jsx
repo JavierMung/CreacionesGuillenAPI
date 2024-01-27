@@ -20,6 +20,9 @@ function NavBar() {
                         <li className="nav-item">
                             <Link className={'nav-link'} to={'/pedidos'}>Pedidos</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className={'nav-link'} to={'/pedido-rapido'}>Pedido rápido</Link>
+                        </li>
                     </ul>
                 </div>
             </div>

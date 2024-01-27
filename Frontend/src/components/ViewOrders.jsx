@@ -8,20 +8,20 @@ function ViewOrders() {
                 <ColumnForm lg={8} md={10} >
                     <div className="row">
                         <ColumnForm md={2}>
-                            <label className="form-label">Cantidad</label>
+                            <label className="form-label">N° pedido</label>
                             <input className="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
                         </ColumnForm>
                         <ColumnForm md={2}>
-                            <label className="form-label">Cantidad</label>
+                            <label className="form-label">Encargado</label>
                             <input className="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
                         </ColumnForm>
                         <ColumnForm md={3}>
-                            <label className="form-label">Cantidad</label>
-                            <input className="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
+                            <label className="form-label">Fecha inicio</label>
+                            <input className="form-control me-2" type="date" placeholder="Buscar..." aria-label="Search" />
                         </ColumnForm>
                         <ColumnForm md={3}>
-                            <label className="form-label">Cantidad</label>
-                            <input className="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
+                            <label className="form-label">Fecha fin</label>
+                            <input className="form-control me-2" type="date" placeholder="Buscar..." aria-label="Search" />
                         </ColumnForm>
                         <ColumnForm md={2} text="center">
                             <div className="row align-items-center">

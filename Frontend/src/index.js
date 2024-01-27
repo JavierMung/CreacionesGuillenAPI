@@ -8,6 +8,7 @@ import {
 import CreateOrder from './components/CreateOrder';
 import Inventario from './components/Inventario';
 import ViewOrders from './components/ViewOrders';
+import FastoOrder from './components/FastOrder';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/pedidos",
         element: <ViewOrders />
+      },
+      {
+        path: "/pedido-rapido",
+        element: <FastoOrder />
       }
     ],
   }
